@@ -9,3 +9,213 @@
 
     --ff: 'Poppins', sans-serif;
 }
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: var(--ff);
+	letter-spacing: .01rem;
+	color: var(--black);
+	transition: all .3s;
+}
+
+html, body {
+	position: relative;
+	background-color: var(--white);
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.rounded {
+    border-radius: 15px;
+
+    // ? Mobile
+    @media screen and (max-width: 480px) {
+        border-radius: 5px;
+    }
+}
+
+.glass-button {
+    font-size: 20px;
+    padding: 20px 27px;
+    color: var(--white);
+    background-color: rgba($color: #000000, $alpha: .01);
+    border: 2px solid rgba($color: #fff, $alpha: .4);
+    border-radius: 7px;
+    cursor: pointer;
+    backdrop-filter: blur(2px);
+
+    &:hover {
+        border: 2px solid rgba($color: #fff, $alpha: 1);
+    }
+
+    // ? Mobile
+    @media screen and (max-width: 480px) {
+        font-size: 15px;
+        padding: 15px calc(15px * 1.33);
+        border-radius: 4px;
+        animation: pulse 5s ease-in infinite;
+
+        @keyframes pulse {
+            0% {
+                border: 2px solid rgba($color: #fff, $alpha: .4);
+            }
+
+            50% {
+                border: 2px solid rgba($color: #fff, $alpha: 1);
+            }
+
+            100% {
+                border: 2px solid rgba($color: #fff, $alpha: .4);
+            }
+        }
+    }
+}
+
+// * Header section
+header {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    padding: 10px 70px;
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+
+    // ? Mobile
+    @media screen and (max-width: 480px) {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        height: 70%;
+    }
+}
+
+// * Hero section
+.hero {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: calc(55px + 50px);
+    //// temp
+    min-height: 100vh;
+
+    // ? Mobile
+    @media screen and (max-width: 480px) {
+        padding-top: calc(55px + 20px);
+    }    
+
+    .title {
+        width: 90%;
+
+        h1 {
+            text-align: center;
+            font-size: 8vw;
+            line-height: 8vw;
+            color: var(--black);
+        }
+
+    }
+
+    .subtitle {
+        width: 90%;
+        margin-top: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+
+        // ? Mobile
+        @media screen and (max-width: 480px) {
+            margin-top: 10px;
+        }
+
+        h2 {
+            font-size: 1.7rem;
+            width: fit-content;
+            font-weight: normal;
+            text-align: center;
+            white-space: nowrap;
+            animation: scroll 20s linear infinite;
+
+            // ? Mobile
+            @media screen and (max-width: 480px) {
+                font-size: 0.8rem;
+            }
+
+            @keyframes scroll {
+                from {
+                    transform: translateX(0);
+                }
+
+                to {
+                    transform: translateX(-100%);
+                }
+            }
+
+            &:first-child {
+                margin-right: 5px;
+            }
+
+        }
+
+    }
+
+    .card {
+        position: relative;
+        width: 90%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        overflow: hidden;
+
+        // ? Mobile
+        @media screen and (max-width: 480px) {
+            margin-top: 40px;
+            height: 80vh;
+        }  
+
+        img {
+            width: 100%;
+
+            // ? Mobile
+            @media screen and (max-width: 480px) {
+                width: unset;
+                height: 100%;
+                transform: translateX(-33%);
+            }  
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            display: grid;
+            place-content: center;
+            opacity: 0;
+            cursor: pointer;
+
+            // ? Mobile
+            @media screen and (max-width: 480px) {
+                opacity: 1;
+            }  
+        }
+
+        &:hover > .overlay {
+            opacity: 1;
+        }
+    }
+
+}

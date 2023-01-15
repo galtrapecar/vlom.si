@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "sass": "^1.57.1"
+  },
+  "name": "vlom.si",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass --watch src/css:out/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galtrapecar/vlom.si.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/galtrapecar/vlom.si/issues"
+  },
+  "homepage": "https://github.com/galtrapecar/vlom.si#readme",
+  "description": ""
+}

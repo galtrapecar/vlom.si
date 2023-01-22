@@ -195,6 +195,16 @@ header .logo {
     margin-top: 40px;
   }
 }
+@media screen and (max-width: 1000px) {
+  .hero .card-overlay {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .hero .card-overlay {
+    margin-bottom: 0px;
+  }
+}
 .hero .card-overlay .new-icon {
   position: relative;
   top: 100%;
@@ -205,6 +215,18 @@ header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 1000px) {
+  .hero .card-overlay .new-icon {
+    width: 170px;
+    height: 170px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .hero .card-overlay .new-icon {
+    width: 150px;
+    height: 150px;
+  }
 }
 .hero .card-overlay .new-icon img {
   position: absolute;
@@ -231,6 +253,8 @@ header .logo {
 @media screen and (max-width: 480px) {
   .hero .card-overlay .card {
     width: 100%;
+    height: 60vh;
+    overflow: hidden;
   }
 }
 .hero .card-overlay .card img {
@@ -240,7 +264,7 @@ header .logo {
   .hero .card-overlay .card img {
     width: unset;
     height: 100%;
-    transform: translateX(-33%);
+    transform: translateX(-28%);
   }
 }
 .hero .extra {
@@ -252,6 +276,19 @@ header .logo {
   grid-template-rows: 1fr;
   gap: 50px;
 }
+@media screen and (max-width: 800px) {
+  .hero .extra {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-height: unset;
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .hero .extra {
+    gap: 0px;
+  }
+}
 .hero .extra .left {
   position: relative;
   width: 100%;
@@ -262,23 +299,80 @@ header .logo {
   align-items: center;
   overflow: hidden;
 }
+@media screen and (max-width: 800px) {
+  .hero .extra .left {
+    width: 90vw;
+    padding: 0;
+    overflow: unset;
+  }
+}
 .hero .extra .left img {
   flex-shrink: 0;
   min-width: 100%;
   max-height: 100%;
-  border-radius: 15px;
+}
+@media screen and (max-width: 800px) {
+  .hero .extra .left img {
+    max-height: 50vh;
+    max-width: 90vw;
+  }
 }
 .hero .extra .right {
   width: 100%;
 }
+@media screen and (max-width: 800px) {
+  .hero .extra .right {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero .extra .right {
+    width: 90%;
+  }
+}
 .hero .extra .right h1 {
-  font-size: 5.3rem;
+  font-size: 5vw;
+}
+@media screen and (max-width: 800px) {
+  .hero .extra .right h1 {
+    font-size: 10vw;
+  }
 }
 .hero .extra .right h2 {
   font-size: 1.1rem;
 }
+@media screen and (max-width: 1100px) {
+  .hero .extra .right h2 {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .hero .extra .right h2 {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero .extra .right h2 {
+    font-size: 0.8rem;
+  }
+}
 .hero .extra .right p {
   margin-top: 20px;
+}
+@media screen and (max-width: 1100px) {
+  .hero .extra .right p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .hero .extra .right p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero .extra .right p {
+    font-size: 0.7rem;
+  }
 }
 .hero .extra .right .black-button {
   margin-top: 30px;
@@ -303,7 +397,22 @@ section.colors .main .logo {
   top: 0;
   transform: translateY(-50%);
   right: 5vw;
-  width: 180px;
+  width: 11vw;
+}
+@media screen and (max-width: 1100px) {
+  section.colors .main .logo {
+    width: 14vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  section.colors .main .logo {
+    width: 20vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  section.colors .main .logo {
+    width: 23vw;
+  }
 }
 section.colors .main .title {
   padding-bottom: 40px;
@@ -312,7 +421,7 @@ section.colors .main .title {
 section.colors .main .title h1 {
   color: var(--white);
   text-align: center;
-  font-size: 8rem;
+  font-size: 8vw;
 }
 section.colors .main .content {
   display: grid;
@@ -322,15 +431,27 @@ section.colors .main .content {
   padding: 5vw;
   padding-top: 0;
 }
+@media screen and (max-width: 930px) {
+  section.colors .main .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-height: unset;
+    padding-bottom: 0;
+  }
+}
 section.colors .main .content .left {
   position: relative;
   width: 100%;
-  border-radius: 15px;
   padding: 0 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+@media screen and (max-width: 930px) {
+  section.colors .main .content .left {
+    height: 50vh;
+  }
 }
 section.colors .main .content .left img {
   position: absolute;
@@ -339,7 +460,6 @@ section.colors .main .content .left img {
   flex-shrink: 0;
   min-width: 100%;
   max-height: 100%;
-  border-radius: 15px;
 }
 section.colors .main .content .left img:first-child {
   position: relative;
@@ -352,7 +472,19 @@ section.colors .main .content .right {
 }
 section.colors .main .content .right .title h1 {
   color: var(--white);
-  font-size: 2.3rem;
+  font-size: 2.3vw;
+}
+@media screen and (max-width: 930px) {
+  section.colors .main .content .right .title h1 {
+    margin-top: 20px;
+    font-size: 4.5vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  section.colors .main .content .right .title h1 {
+    margin-top: 40px;
+    font-size: 4.5vw;
+  }
 }
 section.colors .main .content .right .options {
   width: 100%;
@@ -361,11 +493,28 @@ section.colors .main .content .right .options {
   grid-template-rows: 1fr;
   padding-left: 60px;
 }
+@media screen and (max-width: 930px) {
+  section.colors .main .content .right .options {
+    padding-left: 40px;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  section.colors .main .content .right .options {
+    padding-left: 0;
+    gap: 20px;
+  }
+}
 section.colors .main .content .right .options .column {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 60px;
+}
+@media screen and (max-width: 600px) {
+  section.colors .main .content .right .options .column {
+    gap: 20px;
+  }
 }
 section.colors .main .content .right .options .column .option {
   display: flex;
@@ -378,6 +527,7 @@ section.colors .main .content .right .options .column .option .icon {
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
+  border-radius: 3px;
 }
 section.colors .main .content .right .options .column .option .icon.bela {
   background-image: url(../img/texture/bela.jpeg);
@@ -402,6 +552,31 @@ section.colors .main .content .right .options .column .option .text {
   color: var(--white);
   font-size: 1.3rem;
 }
+@media screen and (max-width: 1390px) {
+  section.colors .main .content .right .options .column .option .text {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  section.colors .main .content .right .options .column .option .text {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  section.colors .main .content .right .options .column .option .text {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 930px) {
+  section.colors .main .content .right .options .column .option .text {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  section.colors .main .content .right .options .column .option .text {
+    font-size: 1rem;
+  }
+}
 section.colors .main .content .right .options .column .option .text .name {
   font-weight: bold;
   color: var(--white);
@@ -413,6 +588,11 @@ section.colors .main .content .right .options .column .option .text .id {
 section.colors .main .content .right .alert {
   padding-left: 60px;
   padding-top: 50px;
+}
+@media screen and (max-width: 600px) {
+  section.colors .main .content .right .alert {
+    padding-left: 0;
+  }
 }
 section.colors .main .content .right .alert p {
   text-align: justify;

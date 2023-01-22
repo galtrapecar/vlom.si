@@ -213,7 +213,15 @@ header {
         // ? Mobile
         @media screen and (max-width: 480px) {
             margin-top: 40px;
-        } 
+        }
+
+        @media screen and (max-width: 1000px) {
+            margin-bottom: 50px;
+        }
+
+        @media screen and (max-width: 800px) {
+            margin-bottom: 0px;
+        }
 
         .new-icon {
             position: relative;
@@ -225,6 +233,17 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
+
+
+            @media screen and (max-width: 1000px) {
+                width: 170px;
+                height: 170px;
+            }
+
+            @media screen and (max-width: 800px) {
+                width: 150px;
+                height: 150px;
+            }
 
             img {
                 position: absolute;
@@ -257,6 +276,8 @@ header {
             // ? Mobile
             @media screen and (max-width: 480px) {
                 width: 100%;
+                height: 60vh;
+                overflow: hidden;
             }  
     
             img {
@@ -266,7 +287,7 @@ header {
                 @media screen and (max-width: 480px) {
                     width: unset;
                     height: 100%;
-                    transform: translateX(-33%);
+                    transform: translateX(-28%);
                 }  
             }
         }
@@ -281,6 +302,16 @@ header {
         grid-template-rows: 1fr;
         gap: 50px;
 
+        @media screen and (max-width: 800px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            max-height: unset;
+            gap: 40px;
+        }
+
+        @media screen and (max-width: 700px) {
+            gap: 0px;
+        }
 
         .left {
             position: relative;
@@ -292,27 +323,73 @@ header {
             align-items: center;
             overflow: hidden;
 
+            @media screen and (max-width: 800px) {
+                width: 90vw;
+                padding: 0;
+                overflow: unset;
+            } 
+
             img {
                 flex-shrink: 0;
                 min-width: 100%;
                 max-height: 100%;
-                border-radius: 15px;
+
+                @media screen and (max-width: 800px) {
+                    max-height: 50vh;
+                    max-width: 90vw;
+                }
             }
         }
 
         .right {
             width: 100%;
 
+            @media screen and (max-width: 800px) {
+                width: 70%;
+            }
+
+            @media screen and (max-width: 600px) {
+                width: 90%;
+            }
+
             h1 {
-                font-size: 5.3rem;
+                font-size: 5vw;
+
+                @media screen and (max-width: 800px) {
+                    font-size: 10vw;
+                }
             }
 
             h2 {
                 font-size: 1.1rem;
+
+                @media screen and (max-width: 1100px) {
+                    font-size: 1rem;
+                }
+
+                @media screen and (max-width: 1000px) {
+                    font-size: 0.9rem;
+                }
+
+                @media screen and (max-width: 600px) {
+                    font-size: 0.8rem;
+                }
             }
 
             p {
                 margin-top: 20px;
+
+                @media screen and (max-width: 1100px) {
+                    font-size: 0.9rem;
+                }
+
+                @media screen and (max-width: 1000px) {
+                    font-size: 0.8rem;
+                }
+
+                @media screen and (max-width: 600px) {
+                    font-size: 0.7rem;
+                }
             }
 
             .black-button {
@@ -343,7 +420,20 @@ section.colors {
             top: 0;
             transform: translateY(-50%);
             right: calc((100vw - 90vw) / 2);
-            width: 180px;
+            width: 11vw;
+
+            @media screen and (max-width: 1100px) {
+                width: 14vw;
+            }
+
+            @media screen and (max-width: 800px) {
+                width: 20vw;
+            }
+
+            // ? Mobile
+            @media screen and (max-width: 480px) {
+                width: 23vw;
+            }  
         }
 
         .title {
@@ -353,7 +443,7 @@ section.colors {
             h1 {
                 color: var(--white);
                 text-align: center;
-                font-size: 8rem;
+                font-size: 8vw;
             }
         }
 
@@ -366,15 +456,25 @@ section.colors {
             padding: calc((100vw - 90vw) / 2);
             padding-top: 0;
 
+            @media screen and (max-width: 930px) {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+                max-height: unset;
+                padding-bottom: 0;
+            }
+
             .left {
                 position: relative;
                 width: 100%;
-                border-radius: 15px;
                 padding: 0 50px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 overflow: hidden;
+
+                @media screen and (max-width: 930px) {
+                    height: 50vh;
+                }
 
                 img {
                     position: absolute;
@@ -383,7 +483,6 @@ section.colors {
                     flex-shrink: 0;
                     min-width: 100%;
                     max-height: 100%;
-                    border-radius: 15px;
                     //transform: translateX(-13%);
 
                     &:first-child {
@@ -402,7 +501,17 @@ section.colors {
                 .title {
                     h1 {
                         color: var(--white);
-                        font-size: 2.3rem;
+                        font-size: 2.3vw;
+
+                        @media screen and (max-width: 930px) {
+                            margin-top: 20px;
+                            font-size: 4.5vw;
+                        }
+
+                        @media screen and (max-width: 600px) {
+                            margin-top: 40px;
+                            font-size: 4.5vw;
+                        }
                     }
                 }
 
@@ -413,11 +522,25 @@ section.colors {
                     grid-template-rows: 1fr;
                     padding-left: 60px;
 
+                    @media screen and (max-width: 930px) {
+                        padding-left: 40px;
+                        gap: 20px;
+                    }
+
+                    @media screen and (max-width: 600px) {
+                        padding-left: 0;
+                        gap: 20px;
+                    }
+
                     .column {
                         width: 100%;
                         display: flex;
                         flex-direction: column;
                         gap: 60px;
+
+                        @media screen and (max-width: 600px) {
+                            gap: 20px;
+                        }
 
                         .option {
                             display: flex;
@@ -430,6 +553,7 @@ section.colors {
                                 background-size: cover;
                                 background-repeat: no-repeat;
                                 cursor: pointer;
+                                border-radius: 3px;
 
                                 &.bela {
                                     background-image: url(../img/texture/bela.jpeg);
@@ -461,6 +585,26 @@ section.colors {
                                 color: var(--white);
                                 font-size: 1.3rem;
 
+                                @media screen and (max-width: 1390px) {
+                                    font-size: 1.1rem;
+                                }
+
+                                @media screen and (max-width: 1200px) {
+                                    font-size: .9rem;
+                                }
+
+                                @media screen and (max-width: 1100px) {
+                                    font-size: .7rem;
+                                }
+
+                                @media screen and (max-width: 930px) {
+                                    font-size: 1.1rem;
+                                }
+
+                                @media screen and (max-width: 600px) {
+                                    font-size: 1rem;
+                                }
+
                                 .name {
                                     font-weight: bold;
                                     color: var(--white);
@@ -477,6 +621,10 @@ section.colors {
                 .alert {
                     padding-left: 60px;
                     padding-top: 50px;
+
+                    @media screen and (max-width: 600px) {
+                        padding-left: 0;
+                    }
 
                     p {
                         text-align: justify;

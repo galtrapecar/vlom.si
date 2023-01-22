@@ -6,6 +6,7 @@
   --gray: #242424;
   --red: #ee2f24;
   --ff: "Poppins", sans-serif;
+  --page-width: 90%;
 }
 
 * {
@@ -71,6 +72,38 @@ html, body {
   }
 }
 
+.black-button {
+  width: fit-content;
+  font-size: 15px;
+  padding: 15px 19.5px;
+  color: var(--white);
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: var(--black);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+  opacity: 0;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .overlay {
+    opacity: 1;
+  }
+}
+
+div:hover > .overlay {
+  opacity: 1;
+}
+
 header {
   position: fixed;
   z-index: 9999;
@@ -107,7 +140,7 @@ header .logo {
   }
 }
 .hero .title {
-  width: 90%;
+  width: var(--page-width);
 }
 .hero .title h1 {
   text-align: center;
@@ -116,7 +149,7 @@ header .logo {
   color: var(--black);
 }
 .hero .subtitle {
-  width: 90%;
+  width: var(--page-width);
   margin-top: 20px;
   overflow: hidden;
   display: flex;
@@ -151,48 +184,247 @@ header .logo {
 .hero .subtitle h2:first-child {
   margin-right: 5px;
 }
-.hero .card {
+.hero .card-overlay {
   position: relative;
-  width: 90%;
+  width: var(--page-width);
   margin-top: 100px;
   margin-bottom: 100px;
-  overflow: hidden;
 }
 @media screen and (max-width: 480px) {
-  .hero .card {
+  .hero .card-overlay {
     margin-top: 40px;
-    height: 80vh;
   }
 }
-.hero .card img {
+.hero .card-overlay .new-icon {
+  position: relative;
+  top: 100%;
+  left: 4%;
+  transform: translateY(-53%);
+  width: 230px;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero .card-overlay .new-icon img {
+  position: absolute;
+  width: 100%;
+}
+.hero .card-overlay .new-icon img:last-child {
+  width: 40%;
+}
+.hero .card-overlay .new-icon img:first-child {
+  animation: rotate 10s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.hero .card-overlay .card {
+  position: relative;
   width: 100%;
 }
 @media screen and (max-width: 480px) {
-  .hero .card img {
+  .hero .card-overlay .card {
+    width: 100%;
+  }
+}
+.hero .card-overlay .card img {
+  width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .hero .card-overlay .card img {
     width: unset;
     height: 100%;
     transform: translateX(-33%);
   }
 }
-.hero .card .overlay {
+.hero .extra {
+  position: relative;
+  width: var(--page-width);
+  max-height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 50px;
+}
+.hero .extra .left {
+  position: relative;
+  width: 100%;
+  border-radius: 15px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.hero .extra .left img {
+  flex-shrink: 0;
+  min-width: 100%;
+  max-height: 100%;
+  border-radius: 15px;
+}
+.hero .extra .right {
+  width: 100%;
+}
+.hero .extra .right h1 {
+  font-size: 5.3rem;
+}
+.hero .extra .right h2 {
+  font-size: 1.1rem;
+}
+.hero .extra .right p {
+  margin-top: 20px;
+}
+.hero .extra .right .black-button {
+  margin-top: 30px;
+}
+
+section.colors {
+  position: relative;
+  width: 100%;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.colors .main {
+  position: relative;
+  width: var(--page-width);
+  background-color: var(--black);
+  padding: 80px 0;
+}
+section.colors .main .logo {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  right: 5vw;
+  width: 180px;
+}
+section.colors .main .title {
+  padding-bottom: 40px;
+  width: 100%;
+}
+section.colors .main .title h1 {
+  color: var(--white);
+  text-align: center;
+  font-size: 8rem;
+}
+section.colors .main .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  max-height: 65vh;
+  padding: 5vw;
+  padding-top: 0;
+}
+section.colors .main .content .left {
+  position: relative;
+  width: 100%;
+  border-radius: 15px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+section.colors .main .content .left img {
   position: absolute;
   top: 0;
   left: 0;
+  flex-shrink: 0;
+  min-width: 100%;
+  max-height: 100%;
+  border-radius: 15px;
+}
+section.colors .main .content .left img:first-child {
+  position: relative;
+}
+section.colors .main .content .right {
   width: 100%;
-  height: 100%;
-  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+section.colors .main .content .right .title h1 {
+  color: var(--white);
+  font-size: 2.3rem;
+}
+section.colors .main .content .right .options {
+  width: 100%;
   display: grid;
-  place-content: center;
-  opacity: 0;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-left: 60px;
+}
+section.colors .main .content .right .options .column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+section.colors .main .content .right .options .column .option {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+section.colors .main .content .right .options .column .option .icon {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-size: cover;
+  background-repeat: no-repeat;
   cursor: pointer;
 }
-@media screen and (max-width: 480px) {
-  .hero .card .overlay {
-    opacity: 1;
-  }
+section.colors .main .content .right .options .column .option .icon.bela {
+  background-image: url(../img/texture/bela.jpeg);
 }
-.hero .card:hover > .overlay {
-  opacity: 1;
+section.colors .main .content .right .options .column .option .icon.hrast {
+  background-image: url(../img/texture/hrast.jpeg);
+}
+section.colors .main .content .right .options .column .option .icon.bukev {
+  background-image: url(../img/texture/bukev.jpeg);
+}
+section.colors .main .content .right .options .column .option .icon.hrast_m {
+  background-image: url(../img/texture/hrast_melody.jpeg);
+}
+section.colors .main .content .right .options .column .option .icon.mahagonij {
+  background-image: url(../img/texture/mahagonij.jpeg);
+}
+section.colors .main .content .right .options .column .option .icon.cesnja {
+  background-image: url(../img/texture/cesnja.jpeg);
+}
+section.colors .main .content .right .options .column .option .text {
+  padding: 5px 0;
+  color: var(--white);
+  font-size: 1.3rem;
+}
+section.colors .main .content .right .options .column .option .text .name {
+  font-weight: bold;
+  color: var(--white);
+}
+section.colors .main .content .right .options .column .option .text .id {
+  font-size: 0.9rem;
+  color: var(--white);
+}
+section.colors .main .content .right .alert {
+  padding-left: 60px;
+  padding-top: 50px;
+}
+section.colors .main .content .right .alert p {
+  text-align: justify;
+  color: var(--white);
+}
+section.colors .main .content .right .alert img {
+  float: left;
+  width: 2.2em;
+  margin: 5px;
+  margin-right: 7px;
+  margin-bottom: 0;
+  aspect-ratio: 1/1;
 }
 
 /*# sourceMappingURL=style.css.map */

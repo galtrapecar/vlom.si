@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VLOM | Proitivlomna vrata slovenske izdelave</title>
 
-    <link rel="shortcut icon" href="./svg/vlom_logo_white_bolt.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="./svg/logos/vlom_logo_white_bolt.svg" type="image/svg+xml">
 
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
-        <img src="./svg/vlom_logo_text_white.svg" alt="Logo podjetja Vlom d.o.o." class="logo">
+        <img src="./svg/logos/vlom_logo_text_white.svg" alt="Logo podjetja Vlom d.o.o." class="logo">
     </header>
 
     <section class="hero">
@@ -29,12 +29,133 @@
             </h2>
         </div>
 
-        <div class="card rounded">
-            <img class="rounded" src="./img/configurator.gif" alt="!#">
-            <div class="overlay" onclick="">
-                <div class="glass-button">Sestavi svoja ></div>
+        <div class="card-overlay">
+            <div class="card rounded">
+                <img class="rounded" src="./img/configurator.gif" alt="!#">
+                <div class="overlay" onclick="">
+                    <div class="glass-button">Sestavi svoja ></div>
+                </div>
+            </div>
+            <div class="new-icon">
+                <img src="./svg/new_icon/circle.svg" alt="!#">
+                <img src="./svg/new_icon/text.svg" alt="!#">
+            </div>
+        </div>
+        
+        <div class="extra">
+            <div class="left">
+                <img id="bela" src="./img/configurator.png" alt="!#">
+                <div class="overlay" onclick="">
+                    <div class="glass-button">Sestavi svoja ></div>
+                </div>
+            </div>
+            <div class="right">
+                <h1>KONFIGURATOR</h1>
+                <h2>Z novim digitalnim konfiguratorjem si sestavite protivlomna vrata vaših sanj.</h2>
+                <p>
+                    Vsaka protivlomna vrata so skrbno sestavljena po vaših željah, zato je možnosti za konfiguracijo vrat po vaši domišljiji neskončno!
+                </p>
+                <p>
+                    S pomočjo konfiguratorja si izberite najljubšo kombinacijo najpopularnejših barv, modelov kljuk in vrst kukal.
+                </p>
+                <p>
+                    Ne skrbite če barve po vaši želji ni med možnostmi! Vaše želje nam sporočite pred nakupom in izbirajte med vsemi, ki jih ponuja RAL lestvica.
+                </p>
+                <div class="black-button">Sestavi svoja ></div>
             </div>
         </div>
     </section>
+
+    <section class="colors">
+        <div class="main rounded">
+            <div class="logo">
+                <img src="./svg/logos/kaindl_logo.svg" alt="">
+            </div>
+            <div class="title">
+                <h1>OGLEJ SI BARVE</h1>
+            </div>
+            <div class="content">
+                <div class="left">
+                    <img id="bela" src="./img/vrata/cesnja_f.jpg" alt="!#">
+                    <img id="bela" src="./img/vrata/mahagonij_f.jpg" alt="!#">
+                    <img id="bela" src="./img/vrata/bukev_f.jpg" alt="!#">
+                    <img id="hrast_m" src="./img/vrata/hrast_m_f.jpg" alt="!#">
+                    <img id="hrast" src="./img/vrata/hrast_f.jpg" alt="!#">
+                    <img id="bela" src="./img/vrata/bela_f.jpg" alt="!#">
+                    <div class="overlay" onclick="">
+                        <!-- TODO fullscreen icon -->
+                        <div class="glass-button">Povečaj ></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="title">
+                        <h1>IZBERITE BARVO VAŠIH VRAT</h1>
+                    </div>
+                    <div class="options">
+                        <div class="column">
+                            <div class="option">
+                                <div class="icon bela"></div>
+                                <div class="text">
+                                    <div class="name">Bela Diamant</div>
+                                    <div class="id">12323 DF</div>
+                                </div>
+                            </div>
+
+                            <div class="option">
+                                <div class="icon hrast"></div>
+                                <div class="text">
+                                    <div class="name">Hrast Natural</div>
+                                    <div class="id">12323 DF</div>
+                                </div>
+                            </div>
+
+                            <div class="option">
+                                <div class="icon bukev"></div>
+                                <div class="text">
+                                    <div class="name">Bukev</div>
+                                    <div class="id">12323 DF</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="option">
+                                <div class="icon hrast_m"></div>
+                                <div class="text">
+                                    <div class="name">Hrast Melody</div>
+                                    <div class="id">12323 DF</div>
+                                </div>
+                            </div>
+
+                            <div class="option">
+                                <div class="icon mahagonij"></div>
+                                <div class="text">
+                                    <div class="name">Mahagonij</div>
+                                    <div class="id">12323 DF</div>
+                                </div>
+                            </div>
+
+                            <div class="option">
+                                <div class="icon cesnja"></div>
+                                <div class="text">
+                                    <div class="name">Češnja Acero</div>
+                                    <div class="id">12323 DF</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert">
+                        <p>
+                            <img src="./svg/icons/alert_white.svg" alt="!#">
+                            Prikazanih je le 6 najpopularnejših barv. Če imate v mislih nekaj posebnega ali želite pregledati celotno ponudbo se obrnite na spletno stran podjetja Kaindl.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="height: 100vh; width: 100%;"></section>
 </body>
 </html>

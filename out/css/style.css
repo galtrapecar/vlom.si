@@ -5,6 +5,8 @@
   --black2: #0b0b0b;
   --gray: #242424;
   --red: #ee2f24;
+  --kaindl: #00305B;
+  --kaindl2: #A5B0CA;
   --ff: "Poppins", sans-serif;
   --page-width: 90%;
 }
@@ -37,6 +39,10 @@ html, body {
   .rounded {
     border-radius: 5px;
   }
+}
+
+.not-displayed {
+  display: none;
 }
 
 .glass-button {
@@ -398,6 +404,41 @@ section.colors .main .logo {
   transform: translateY(-50%);
   right: 5vw;
   width: 11vw;
+  animation: shake 1s linear infinite;
+  animation-play-state: paused;
+  cursor: pointer;
+}
+section.colors .main .logo.hovered {
+  transform: rotate(0) translateY(-50%) scale(1.2) !important;
+}
+section.colors .main .logo .text {
+  max-width: 0;
+  max-height: 100%;
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  overflow: hidden;
+  transform: translateX(-110%) translateY(-50%);
+}
+section.colors .main .logo .text .text-inner {
+  padding: 10px;
+  height: 70%;
+  max-height: 70%;
+  width: 30vw;
+  min-width: 500px;
+  background-color: var(--white);
+  border: 5px solid var(--kaindl);
+}
+section.colors .main .logo .text .text-inner p {
+  font-size: 0.9rem;
+}
+section.colors .main .logo a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 @media screen and (max-width: 1100px) {
   section.colors .main .logo {
@@ -412,6 +453,23 @@ section.colors .main .logo {
 @media screen and (max-width: 480px) {
   section.colors .main .logo {
     width: 23vw;
+  }
+}
+@keyframes shake {
+  30% {
+    transform: translateY(-50%) scale(1.1);
+  }
+  40%, 60% {
+    transform: translateY(-50%) rotate(-10deg) scale(1.1);
+  }
+  50% {
+    transform: translateY(-50%) rotate(10deg) scale(1.1);
+  }
+  70% {
+    transform: translateY(-50%) rotate(0deg) scale(1.1);
+  }
+  100% {
+    transform: translateY(-50%) scale(1);
   }
 }
 section.colors .main .title {
@@ -463,6 +521,9 @@ section.colors .main .content .left img {
 }
 section.colors .main .content .left img:first-child {
   position: relative;
+}
+section.colors .main .content .left .overlay {
+  max-width: 100%;
 }
 section.colors .main .content .right {
   width: 100%;
@@ -522,12 +583,28 @@ section.colors .main .content .right .options .column .option {
   gap: 20px;
 }
 section.colors .main .content .right .options .column .option .icon {
+  position: relative;
   height: 100%;
   aspect-ratio: 1/1;
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
   border-radius: 3px;
+  transition: none;
+}
+section.colors .main .content .right .options .column .option .icon.checked {
+  border: var(--red) 2px solid;
+}
+section.colors .main .content .right .options .column .option .icon.checked::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../svg/icons/check.svg);
+  background-size: contain;
+  transform: scale(0.7);
 }
 section.colors .main .content .right .options .column .option .icon.bela {
   background-image: url(../img/texture/bela.jpeg);
@@ -597,6 +674,9 @@ section.colors .main .content .right .alert {
 section.colors .main .content .right .alert p {
   text-align: justify;
   color: var(--white);
+}
+section.colors .main .content .right .alert p a {
+  color: var(--kaindl2);
 }
 section.colors .main .content .right .alert img {
   float: left;

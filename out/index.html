@@ -68,21 +68,30 @@
 
     <section class="colors">
         <div class="main rounded">
-            <div class="logo">
+            <div class="logo" id="kaindl">
                 <img src="./svg/logos/kaindl_logo.svg" alt="">
+                <div class="text" id="keindl-text">
+                    <div class="text-inner rounded">
+                        <p>Protivlomna vrata VLOM so zaključena z laminatnimi ploščami vrhunske kvalitete Avstriskega podjetja Kaindl.
+                            <br>Preverite njihovo spletno stran za ogled celotne ponudbe barv in tekstur naših vrat.
+                        </p>
+                    </div>
+                </div>
+                <a href="https://www.kaindl.com/en/boards/laminates/" target="_blank"></a>
             </div>
             <div class="title">
                 <h1>OGLEJ SI BARVE</h1>
             </div>
             <div class="content">
                 <div class="left rounded">
-                    <img id="bela" src="./img/vrata/cesnja_f.jpg" alt="!#">
-                    <img id="bela" src="./img/vrata/mahagonij_f.jpg" alt="!#">
-                    <img id="bela" src="./img/vrata/bukev_f.jpg" alt="!#">
-                    <img id="hrast_m" src="./img/vrata/hrast_m_f.jpg" alt="!#">
-                    <img id="hrast" src="./img/vrata/hrast_f.jpg" alt="!#">
-                    <img id="bela" src="./img/vrata/bela_f.jpg" alt="!#">
-                    <div onclick="">
+                    <img class="not-displayed" src="./img/vrata/cesnja_f.jpg" alt="!#">
+                    <img id="mahagonij" class="not-displayed selected-color" src="./img/vrata/mahagonij_f.jpg" alt="!#">
+                    <img id="cesnja" class="not-displayed selected-color" src="./img/vrata/cesnja_f.jpg" alt="!#">
+                    <img id="bukev" class="not-displayed selected-color" src="./img/vrata/bukev_f.jpg" alt="!#">
+                    <img id="hrast_m" class="not-displayed selected-color" src="./img/vrata/hrast_m_f.jpg" alt="!#">
+                    <img id="hrast" class="not-displayed selected-color" src="./img/vrata/hrast_f.jpg" alt="!#">
+                    <img id="bela" class="selected-color" src="./img/vrata/bela_f.jpg" alt="!#">
+                    <div class="overlay">
                         <!-- TODO fullscreen icon -->
                         <div class="glass-button">Povečaj ></div>
                     </div>
@@ -94,7 +103,7 @@
                     <div class="options">
                         <div class="column">
                             <div class="option">
-                                <div class="icon bela"></div>
+                                <div class="icon bela checked"></div>
                                 <div class="text">
                                     <div class="name">Bela Diamant</div>
                                     <div class="id">12323 DF</div>
@@ -148,7 +157,7 @@
                     <div class="alert">
                         <p>
                             <img src="./svg/icons/alert_white.svg" alt="!#">
-                            Prikazanih je le 6 najpopularnejših barv. Če imate v mislih nekaj posebnega ali želite pregledati celotno ponudbo se obrnite na spletno stran podjetja Kaindl.
+                            Prikazanih je le 6 najpopularnejših barv. Če imate v mislih nekaj posebnega ali želite pregledati celotno ponudbo se obrnite na spletno stran podjetja <a href="https://www.kaindl.com/en/boards/laminates/" target="_blank">Kaindl</a>.
                         </p>
                     </div>
                 </div>
@@ -157,5 +166,7 @@
     </section>
 
     <section style="height: 100vh; width: 100%;"></section>
+
+    <script src="./js/index.js"></script>
 </body>
 </html>

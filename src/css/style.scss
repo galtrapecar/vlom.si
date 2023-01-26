@@ -424,11 +424,9 @@ section.colors {
         .logo {
             position: absolute;
             top: 0;
-            transform: translateY(-50%);
+            transform: translateY(-50%) !important;
             right: calc((100vw - 90vw) / 2);
             width: 11vw;
-            animation: shake 1s linear infinite;
-            animation-play-state: paused;
             cursor: pointer;
 
             &.hovered {
@@ -483,23 +481,23 @@ section.colors {
 
             @keyframes shake {
                 30% {
-                    transform: translateY(-50%) scale(1.1);
+                    transform: translateY(-50%);
                 }
 
                 40%, 60% {
-                    transform: translateY(-50%) rotate(-10deg) scale(1.1);
+                    transform: translateY(-50%) rotate(-10deg);
                 }
 
                 50% {
-                    transform: translateY(-50%) rotate(10deg) scale(1.1);
+                    transform: translateY(-50%) rotate(10deg);
                 }
 
                 70% {
-                    transform: translateY(-50%) rotate(0deg) scale(1.1);
+                    transform: translateY(-50%) rotate(0deg);
                 }
 
                 100% {
-                    transform: translateY(-50%) scale(1);
+                    transform: translateY(-50%);
                 }
               }
         }

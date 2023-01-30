@@ -39,9 +39,17 @@ function init_shake_animation() {
         }, 1000)
     }, 4000)
 
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log(1);
+        logo.style.animationName = 'shake'
+        logo.syle.animationDuation = '1s'
+        logo.stytle.animationTimingF
+        logo.style.animationPlayState = ''
+    })
+
     logo.addEventListener('mouseenter', () => {
         paused = true
-        logo.style.animation = 'none'
+        logo.style.animation = ''
         logo.style.animationPlayState = 'paused'
         logo.classList.add('hovered')
         text.style.maxWidth = '30vw'
@@ -49,9 +57,12 @@ function init_shake_animation() {
 
     logo.addEventListener('mouseleave', () => {
         paused = false
-        logo.style.animation = 'shake 1s linear infinite'
-        logo.style.animationPlayState = 'paused'
         logo.classList.remove('hovered')
+        logo.addEventListener('transitionend', () => {
+            logo.style.animation = 'shake 1s linear infinite'
+            logo.style.animationPlayState = 'paused'
+        })
+        
         text.style.maxWidth = '0'
     })
 }

@@ -816,10 +816,50 @@ section.colors {
             margin-top: 130px;
 
             .card {
+                position: relative;
                 width: 100%;
                 min-height: 75vh;
                 background-color: var(--gray);
                 transition: all .5s;
+                padding: 50px;
+
+                .title {
+                    color: var(--white);
+                    font-size: 1.7vw;
+                    font-weight: bold;
+                }
+
+                .img {
+                    margin-top: 40px;
+                    width: 100%;
+                    height: calc(70vh / 2);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        flex-shrink: 0;
+                        height: 100%;
+                    }
+                }
+
+                .subtitle {
+                    margin-top: 40px;
+                    color: var(--white);
+                    display: block;
+                    padding: 0;
+                    text-align: left !important;
+                    font-weight: bold;
+                    font-size: 1.3rem;
+                }
+
+                .description {
+                    margin-top: 20px;
+                    color: var(--white);
+                    font-size: 0.9rem;
+                }
 
                 &:hover {
                     transform: translateY(-2%);

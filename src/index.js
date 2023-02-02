@@ -252,7 +252,7 @@ function init() {
 
         if (selected_object) {
             selected_object.material.opacity = .5
-            document.body.style.cursor = 'default'
+            document.body.style.cursor = ''
             looking_at_sprite = false
             selected_object = null
         }
